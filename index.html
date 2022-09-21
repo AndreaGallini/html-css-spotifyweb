@@ -4,10 +4,149 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <title>Spotify</title>
 </head>
 <body>
-    
+    <div class="wrapper">
+        <div class="container d-flex">
+            <nav class="lateral-nav">
+                <img class="logo" src="./img/logo.svg" alt="">
+                <div class="menu-nav">
+                    <p class="text-white"><i class="fa-solid fa-house"></i> Home</p>
+                    <p class="text-white"><i class="fa-solid fa-magnifying-glass"></i> cerca</p>
+                    <p class="text-white"><i class="fa-solid fa-lines-leaning"></i> la tua libreria</p>
+                </div>
+                <p id="playlist">playlist</p>
+                <span class="container-quadrato">
+                    <div class="quadrato">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="quadrato-testo">
+                        <p>crea playlist</p>
+                    </div>
+                </span>
+                <div class="new-playlists">
+                    <p class="new-playlist">nome playlist</p>
+                    <p class="new-playlist">nome playlist</p>
+                    <p class="new-playlist">nome playlist</p>
+                    <p class="new-playlist">nome playlist</p>
+                    <p class="new-playlist">nome playlist</p>
+                    <p class="new-playlist">nome playlist</p>
+                    <p class="new-playlist">nome playlist</p>
+                </div>
+                <div class="install-account">
+                    <div class="install">
+                        <img src="./img/download.svg" alt="">
+                        <p>Installa app</p>
+                    </div>
+
+                    <hr class="hr">
+                    <section class="account ">
+                        <img class="bg" src="./img/profile.svg" alt="">
+                        <p> John Doe</p>
+                    </section>
+                </div>
+            </nav>
+            <main class="main-content">
+                <section class="top">
+                    <a class="btn" href="#">effettua l'upgrade</a>
+                </section>
+                <div class="main-inner">
+                    <p class="what">
+                        <span>
+                            in evidenza
+                        </span>
+                        <span>
+                            podcast
+                        </span>
+                        <span>
+                            classifiche 
+                        </span>
+                        <span>
+                            generi e mood
+                        </span>
+                        <span>
+                            nuove uscite
+                        </span>
+                        <span>
+                            scopri
+                        </span>
+                    </p>
+                    <div class="inner">
+                        <section class="recently">
+                            <p class="main-title">recently played</p>
+                            <div class="cards">
+                                <div class="card">
+                                    <img src="./img/metal_lifting.jpg" alt="">
+                                    <p class="main-title-card">heavy metal</p>
+                                    <p class="subtitle-card">subtitle</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/stranger.jpeg" alt="">
+                                    <p class="main-title-card">stranger thing, vol.1 (a netflix original series soundtrack</p>
+                                    <p class="subtitle-card">kyle dixon & micheal stein</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/aquietplace.jpeg" alt="">
+                                    <p class="main-title-card">a quiet place</p>
+                                    <p class="subtitle-card">subtitle</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/split.jpeg" alt="">
+                                    <p class="main-title-card">split</p>
+                                    <p class="subtitle-card">subtitle</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/cure.jpeg" alt="">
+                                    <p class="main-title-card">a cure for wellness</p>
+                                    <p class="subtitle-card">subtitle</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/sinister.jpeg" alt="">
+                                    <p class="main-title-card">sinister</p>
+                                    <p class="subtitle-card">subtitle</p>
+                                </div>
+                            </div>
+
+                        </section>
+                        <section class="for-you">
+                            <p class="main-title">creato per John</p>
+                            <div class="cards cards-for-you">
+                                <div class="card">
+                                    <img src="./img/radar.jpeg" alt="">
+                                    <p class="main-title-card">release radar</p>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/mixdaily.jpeg" alt="">
+                                    <p class="main-title-card">daily mix 1</p>
+                                </div>
+                        </section>
+                        <section class="popular-artists">
+                            <p class="main-title">artisti pi&ugrave; popolari</p>
+                            <div class="cards cards-for-you">
+                                <div class="card">
+                                    <img class="card-rounded" src="./img/youg.jpeg" alt="">
+                                    <p class="main-title-card">Youg</p>
+                                </div>
+                                <div class="card">
+                                    <img class="card-rounded" src="./img/einaudi.jpeg" alt="">
+                                    <p class="main-title-card">Einaudi</p>
+                                </div>
+
+                        </section>
+
+                    </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+
+
+    </div>
 </body>
 </html>
