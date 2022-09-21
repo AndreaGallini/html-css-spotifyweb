@@ -29,11 +29,15 @@
     width: 230px;
     overflow: hidden;
     position: relative;
+
 }
 .main-content{
     width: calc(100% - 230px);
     height: calc(100vh - 95px);
     overflow-y: auto;
+}
+.main-inner{
+    padding-top: 100px;
 }
 .what{
     display: flex;
@@ -88,9 +92,42 @@
     max-width: calc((100% / 6) - 10px);
     align-items: center;
     padding: 0 5px;
+    
+    
 }
 .card img{
     max-width: 100%;
+  
+}
+.img-card{
+    width: 100%;
+    position: relative;
+}
+.layover{
+    width:100%;
+    height: 100%;
+    background-color: var(--black-transparent);
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+}
+.layover i{
+    color: var(--white);
+    font-size: 22px;
+    display: inline;
+    padding: 0;
+
+    
+
+}
+.layover + .card:hover{
+    display: block;
 }
 .cards{
     display: flex;
@@ -172,9 +209,9 @@ i{
     width: 100%;
     height: 150px;
     padding-left: 15px;
-    position: absolute;
+    /* position: absolute;
     bottom: 0;
-    left: 0;
+    left: 0; */
 }
 .install-account img{
     width: 30px;
@@ -209,6 +246,12 @@ i{
     background-color: var(--grey-word);
     border-radius: 50%;
 }
+.inner-nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc( 100vh - 130px );
+}
 /* TOPSECTION */
 .top{
     background-color: var(--black-transparent);
@@ -216,12 +259,11 @@ i{
     height: 95px;
     position: fixed;
     top: 0;
-    position: relative;
 }
 .btn{
     position: absolute;
-    right: 10px;
     top: 20px;
+    right: 300px;
     border: 1px solid var(--white);
     color: var(--white);
     padding: 15px 40px;
@@ -248,12 +290,24 @@ footer{
     z-index: 1000;
 }
 /* mediaquery */
-@media screen and (max-width:600px){
+
+
+@media screen and (min-width: 1100px){
     .wrapper{
-        max-width: 540px;
+        max-width: 100%;
+    }
+
+}
+@media screen and (max-width:700px){
+    .wrapper{
+        max-width: 100%;
+    }
+    .what{
+        flex-wrap: wrap;
+        flex-basis: calc(100% / 5);
     }
     .card{
-        max-width: calc((100% / 2) - 10px);
+        max-width: calc((100% / 4) - 5px);
         flex-wrap: wrap;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -262,21 +316,13 @@ footer{
         flex-wrap: wrap;
         justify-content: flex-start;
         
-    }
-    
 }
-@media screen and (max-width:700px){
-    .wrapper{
-        max-width: 680px;
-    }
-    
-}
-@media screen and (max-width: 1100px){
+@media screen and (max-width:600px){
     .wrapper{
         max-width: 100%;
     }
     .card{
-        max-width: calc((100% / 4) - 10px);
+        max-width: calc((100% / 2) - 10px);
         flex-wrap: wrap;
         padding-top: 10px;
         padding-bottom: 10px;
