@@ -59,6 +59,14 @@
     color: var(--white);
     cursor: pointer;
 }
+.what p.active:after{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--green);
+    margin: 1px auto;
+}
 .inner{
     padding-left:20px;
     padding-right: 20px;
@@ -114,20 +122,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
-    
+    display: none;    
 }
 .layover i{
     color: var(--white);
     font-size: 22px;
-    display: inline;
     padding: 0;
 
     
 
 }
-.layover + .card:hover{
+.img-card:hover .layover{
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 .cards{
     display: flex;
@@ -142,8 +152,18 @@
 }
 .card-rounded{
     border-radius: 50%;
-}
 
+}
+.hidden{
+    overflow: hidden;
+    border-radius: 50%;
+}
+img{
+    display: block;
+}
+p:hover{
+    cursor: pointer;
+}
 .logo{
     padding: 20px;
 }
@@ -196,7 +216,7 @@ i{
     padding-left: 20px;
     padding-top: 20px;
     height: 200px;
-    overflow-y: scroll;
+    overflow-y: auto;
     
 }
 .new-playlist{
@@ -255,7 +275,7 @@ i{
 /* TOPSECTION */
 .top{
     background-color: var(--black-transparent);
-    width: 100%;
+    width: calc(100% - 230px);
     height: 95px;
     position: fixed;
     top: 0;
@@ -263,7 +283,7 @@ i{
 .btn{
     position: absolute;
     top: 20px;
-    right: 300px;
+    right: 25px;
     border: 1px solid var(--white);
     color: var(--white);
     padding: 15px 40px;
@@ -290,6 +310,17 @@ footer{
     z-index: 1000;
 }
 /* mediaquery */
+/*nav small*/
+.nav-small{
+    height: calc(100% - 95px);
+    width: 60px;
+    display: none;
+    background-color: var(--black);
+}
+.nav-small .install-account img{
+    margin-bottom: 20px;
+}
+
 
 
 @media screen and (min-width: 1100px){
@@ -336,4 +367,37 @@ footer{
         flex-wrap: wrap;
         flex-basis: calc(100% / 5);
     }
+}
+@media screen and (max-width:550px){
+    .wrapper{
+        max-width: 100%;
+    }
+    .card{
+        max-width: calc((100% / 2) - 10px);
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .cards{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .what{
+        flex-wrap: wrap;
+        flex-basis: calc(100% / 5);
+    }
+    .lateral-nav{
+        display: none;
+    }
+    .nav-small{
+        display: block;
+    }
+    .main-content{
+        width: calc(100% - 60px);
+    }
+    .top{
+        width: calc(100% - 60px);
+    }
+    
 }
